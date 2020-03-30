@@ -1,0 +1,105 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
++media-breakpoint-down(lg)
+
+// ≥992px
++media-breakpoint-down(md)
+
+// ≥768px
++media-breakpoint-down(sm)
+
+// ≥576px
++media-breakpoint-down(xs)
+	.slogan
+		text-align: center
+		margin-bottom: 20px
+		font-size: 18px
+		a
+			i.icon
+				top: 9px
+	
+	.header_phone
+		text-align: center
+		padding: 20px 0
+
+	.header_nav, .footer_nav
+		ul
+			margin: 0 0 15px 15px
+			flex-flow: column wrap
+			display: none
+			li
+				margin: 0 0 10px 0
+				a
+					font-size: 16px
+					padding: 0
+	
+	.banner_text
+		padding: 30px 15px 0 15px
+		min-height: 340px
+		h1,h2
+			font-size: 28px
+			line-height: 35px
+		p
+			font-size: 18px
+	
+	.header_form
+		padding: 30px 15px 0 15px
+		legend
+			font-size: 21px
+			line-height: 25px
+			text-align: center
+
+	.advantage, .how_work, .reviews, .work_will, .materials, .about, .our_works, .contacts, .questions
+		padding: 20px 0
+
+	.sect_title
+		margin-bottom: 30px
+		font-size: 35px
+
+	.reviews_carusel 
+		.owl-nav
+			display: none
+
+	.btn
+		font-size: 18px
+
+	.about 
+		ul
+			margin-bottom: 20px
+
+	.price
+		min-height: 400px
+		.sect_title
+			margin-top: 120px
+
+	.our_works_carousel 
+		.owl-nav
+			display: none
+
+	.map
+		margin-top: 20px
+
+	.questions
+		min-height: 1000px
+
+	.footer_nav
+		padding: 15px
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+
+
+// ≤768px
++media-breakpoint-up(md)
+
+// ≤992px
++media-breakpoint-up(lg)
+
+// ≤1200px
++media-breakpoint-up(xl)

@@ -1,0 +1,697 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+.no-gutters
+	padding-right: 0
+	padding-left: 0
+
+.slogan, .header_phone
+	display: flex
+	justify-content: center
+	// align-items: center
+	height: 100%
+	flex-flow: column wrap
+	font-size: 24px
+	color: #000
+	line-height: 32px
+
+.slogan
+	text-align: right
+	a
+		color: #000
+		position: relative
+		padding-right: 60px
+		transition: color .3s ease
+		&:hover
+			text-decoration: none
+			color: $accent
+		.icon
+			position: absolute
+			right: 0
+			top: 12px
+
+.header_phone
+	padding-left: 15px
+	a
+		color: #000
+		transition: color .3s ease
+		&:hover
+			text-decoration: none
+			color: $accent
+
+.header_nav
+	box-shadow: 0px 5px 15px 0px rgba(8,8,9,.2)
+	ul
+		list-style-type: none
+		margin: 0
+		padding: 0
+		display: flex
+		justify-content: center
+		li
+			a
+				display: inline-block
+				padding: 40px 30px
+				color: #000
+				font-size: 24px
+				transition: color .3s ease
+				&:hover
+					text-decoration: none
+					color: $accent
+
+
+
+.banner_text
+	background-image: url('../img/header_photo.jpg')
+	padding: 180px 0 180px 100px
+	min-height: 670px 
+	background-position: bottom right
+	background-repeat: no-repeat
+	background-size: cover
+	padding-left: 
+	h1,h2
+		font-family: $title-font
+		font-size: 67px
+		line-height: 75px
+		color: #fff
+		text-shadow: 3px 3px 2px rgba(0,0,0,.3)
+	p
+		margin-top: 20px
+		font-family: $bold-font
+		color: #fff
+		font-size: 22px
+.form-group
+	position: relative
+	margin-bottom: 30px
+
+.form-label 
+	position: absolute
+	left: 0
+	top: 10px
+	color: #999
+	z-index: 10
+	transition: transform 150ms ease-out, font-size 150ms ease-out
+
+
+.focused .form-label 
+	transform: translateY(-125%)
+	font-size: .75em
+
+
+.form-input 
+	position: relative
+	padding: 12px 0px 5px 0
+	width: 100%
+	outline: 0
+	border: 0
+	box-shadow: 0 1px 0 0 #e5e5e5
+	transition: box-shadow 150ms ease-out
+	z-index: 100
+	background-color: transparent
+	&:focus 
+		box-shadow: 0 2px 0 0 $accent
+	
+.form-input.filled 
+	box-shadow: 0 2px 0 0 lightgreen
+
+.form_btn
+	background-color: $accent
+	border: none
+	display: inline-block
+	padding: 20px 50px
+	color: #fff
+	text-transform: uppercase
+	font-family: $bold-font
+	font-size: 20px
+	cursor: pointer
+	text-align: center
+	transition: all .3s ease
+	&:hover
+		background-color: #000
+		color: #fff
+
+.header_form
+	padding: 50px 30px 0px 0px
+	position: relative
+	min-height: 670px
+	.form-group
+		margin-bottom: 50px
+	legend
+		color: $accent
+		font-size: 30px
+		line-height: 40px
+		font-family: $bold-font
+		margin-bottom: 40px
+	.form_btn
+		width: 100%
+
+.advantage
+	padding: 80px 0
+	.advant_item
+		display: flex
+		flex-flow: column wrap
+		justify-content: center
+		align-items: center
+		text-align: center
+		min-height: 300px 
+		img
+			margin-bottom: 5px
+		p
+			display: block
+			font-size: 19px
+
+.sect_title
+	text-align: center
+	font-size: 40px
+	color: #000
+	font-family: $bold-font
+	text-align: center
+	margin-bottom: 60px
+
+.sect_subtitle
+	text-align: center
+	font-family: $bold-font
+	color: #000
+	font-size: 23px
+	margin-bottom: 20px
+
+.sect_desc
+	text-align: center
+	// font-family: $bold-font
+	color: #000
+	font-size: 18px
+
+.how_work
+	padding: 80px 0
+	.how_work_item
+		text-align: center
+		margin: 20px 
+		img
+			margin-bottom: 10px
+		h3
+			font-family: $bold-font
+			font-size: 20px
+			line-height: 25px
+			margin-bottom: 20px
+		p
+			font-size: 16px
+			line-height: 25px
+
+.owl-carousel
+	display: block!important
+
+.reviews
+	padding: 80px 0
+
+.reviews_carusel
+	.owl-item
+		text-align: center
+		opacity: .3
+		&.center
+			opacity: 1
+		p
+			margin-bottom: 30px
+		.review_author
+			font-family: $bold-font
+	.owl-nav
+		position: absolute
+		top: 27%
+		width: 100%
+		display: flex
+		justify-content: center
+
+		.owl-prev
+			margin-right: 28%
+			opacity: .3
+			transition: opacity .3s ease
+			&:hover
+				opacity: 1
+		.owl-next
+			opacity: .3
+			transition: opacity .3s ease
+			&:hover
+				opacity: 1
+		.icon
+			display: block
+			width: 50px
+			height: 50px
+			&.icon-arrow-left
+				background-image: url('../img/icons/arrow_left.png')
+				background-size: cover
+			&.icon-arrow-right
+				background-image: url('../img/icons/arrow_right.png')
+				background-size: cover
+
+.work_will
+	padding: 80px 0
+	.sect_title
+		margin-bottom: 70px
+	.btn
+		margin-top: 70px
+.work_will_item
+	text-align: center
+	margin: 30px 0
+	img
+		margin-bottom: 20px
+	p.work_will_item_name
+		font-family: $bold-font
+		font-size: 24px
+		margin-bottom: 0
+	span.work_will_item_prof
+		font-size: 16px
+		font-weight: bold
+	h3.work_will_item_desc
+		margin-top: 10px
+		font-size: 14px
+		font-weight: 400
+
+.btn
+	display: inline-block
+	background-color: $accent
+	color: #fff
+	padding: 20px 50px
+	font-size: 20px
+	text-transform: uppercase
+	font-family: $bold-font
+	cursor: pointer
+	text-align: center
+	&:hover
+		text-decoration: none
+		color: #fff
+
+/* Styles for dialog window */
+#consultation
+	background: white
+	padding: 20px 30px
+	text-align: left
+	max-width: 400px
+	margin: 40px auto
+	position: relative
+
+/* start state */
+.my-mfp-zoom-in .zoom-anim-dialog 
+	opacity: 0
+
+	-webkit-transition: all 0.2s ease-in-out 
+	-moz-transition: all 0.2s ease-in-out 
+	-o-transition: all 0.2s ease-in-out 
+	transition: all 0.2s ease-in-out 
+
+
+
+	-webkit-transform: scale(0.8) 
+	-moz-transform: scale(0.8) 
+	-ms-transform: scale(0.8) 
+	-o-transform: scale(0.8) 
+	transform: scale(0.8) 
+
+
+/* animate in */
+.my-mfp-zoom-in.mfp-ready .zoom-anim-dialog 
+	opacity: 1
+
+	-webkit-transform: scale(1) 
+	-moz-transform: scale(1) 
+	-ms-transform: scale(1) 
+	-o-transform: scale(1) 
+	transform: scale(1) 
+
+
+/* animate out */
+.my-mfp-zoom-in.mfp-removing .zoom-anim-dialog 
+	-webkit-transform: scale(0.8) 
+	-moz-transform: scale(0.8) 
+	-ms-transform: scale(0.8) 
+	-o-transform: scale(0.8) 
+	transform: scale(0.8) 
+
+	opacity: 0
+
+
+/* Dark overlay, start state */
+.my-mfp-zoom-in.mfp-bg 
+	opacity: 0
+	-webkit-transition: opacity 0.3s ease-out 
+	-moz-transition: opacity 0.3s ease-out 
+	-o-transition: opacity 0.3s ease-out 
+	transition: opacity 0.3s ease-out
+
+/* animate in */
+.my-mfp-zoom-in.mfp-ready.mfp-bg 
+	opacity: 0.8
+
+/* animate out */
+.my-mfp-zoom-in.mfp-removing.mfp-bg 
+	opacity: 0
+
+
+
+
+/**
+ * Fade-move animation for second dialog
+ */
+
+/* at start */
+.my-mfp-slide-bottom .zoom-anim-dialog 
+	opacity: 0
+	-webkit-transition: all 0.2s ease-out
+	-moz-transition: all 0.2s ease-out
+	-o-transition: all 0.2s ease-out
+	transition: all 0.2s ease-out
+
+	-webkit-transform: translateY(-20px) perspective( 600px ) rotateX( 10deg )
+	-moz-transform: translateY(-20px) perspective( 600px ) rotateX( 10deg )
+	-ms-transform: translateY(-20px) perspective( 600px ) rotateX( 10deg )
+	-o-transform: translateY(-20px) perspective( 600px ) rotateX( 10deg )
+	transform: translateY(-20px) perspective( 600px ) rotateX( 10deg )
+
+
+
+/* animate in */
+.my-mfp-slide-bottom.mfp-ready .zoom-anim-dialog 
+	opacity: 1
+	-webkit-transform: translateY(0) perspective( 600px ) rotateX( 0 ) 
+	-moz-transform: translateY(0) perspective( 600px ) rotateX( 0 ) 
+	-ms-transform: translateY(0) perspective( 600px ) rotateX( 0 ) 
+	-o-transform: translateY(0) perspective( 600px ) rotateX( 0 ) 
+	transform: translateY(0) perspective( 600px ) rotateX( 0 ) 
+
+
+/* animate out */
+.my-mfp-slide-bottom.mfp-removing .zoom-anim-dialog 
+	opacity: 0
+
+	-webkit-transform: translateY(-10px) perspective( 600px ) rotateX( 10deg ) 
+	-moz-transform: translateY(-10px) perspective( 600px ) rotateX( 10deg ) 
+	-ms-transform: translateY(-10px) perspective( 600px ) rotateX( 10deg ) 
+	-o-transform: translateY(-10px) perspective( 600px ) rotateX( 10deg ) 
+	transform: translateY(-10px) perspective( 600px ) rotateX( 10deg ) 
+
+
+/* Dark overlay, start state */
+.my-mfp-slide-bottom.mfp-bg 
+	opacity: 0
+
+	-webkit-transition: opacity 0.3s ease-out 
+	-moz-transition: opacity 0.3s ease-out 
+	-o-transition: opacity 0.3s ease-out 
+	transition: opacity 0.3s ease-out
+
+/* animate in */
+.my-mfp-slide-bottom.mfp-ready.mfp-bg 
+	opacity: 0.8
+
+/* animate out */
+.my-mfp-slide-bottom.mfp-removing.mfp-bg 
+	opacity: 0
+
+.materials
+	padding: 80px 0 0 0
+
+.materials_carusel
+	margin-top: 50px
+	height: 400px
+	overflow: hidden
+
+.about
+	background-color: #F7F7F7
+	padding: 100px 0 80px 0
+	background-image: url('../img/red_sofa.jpg')
+	background-repeat: no-repeat
+	background-position: bottom center
+	.sect_subtitle
+		text-align: left
+		margin-top: 50px
+	ul
+		list-style-type: none
+		margin: 0
+		padding: 0
+
+.price
+	min-height: 700px
+	margin-top: 100px
+	.sect_title
+		color: #fff
+		margin-top: 230px
+		margin-bottom: 30px
+	.price_phone
+		color: #fff
+		text-align: center
+		a
+			color: #fff
+			font-size: 28px
+			font-family: $bold-font
+			transition: color .3s ease
+			&:hover
+				text-decoration: none
+				color: $accent
+			i
+				display: inline-block
+				margin-top: 20px
+
+.our_works
+	padding: 80px 0 80px 0
+
+.our_works_carousel
+	.owl-nav
+		position: absolute
+		top: 48%
+		width: 100%
+		display: flex
+		justify-content: center
+
+	.owl-prev
+		margin-right: 71%
+		opacity: .3
+		transition: opacity .3s ease
+		&:hover
+			opacity: 1
+	.owl-next
+		opacity: .3
+		transition: opacity .3s ease
+		&:hover
+			opacity: 1
+	.icon
+		display: block
+		width: 50px
+		height: 50px
+		&.icon-arrow-left
+			background-image: url('../img/icons/arrow_left.png')
+			background-size: cover
+		&.icon-arrow-right
+			background-image: url('../img/icons/arrow_right.png')
+			background-size: cover
+
+.contacts
+	padding: 80px 0 0 0
+.contacts_item
+	ul
+		list-style: none
+		margin: 0 0 30px 0
+		padding: 0
+		position: relative
+		li
+			a
+				font-size: 19px
+				color: #000
+				font-family: $bold-font
+				transition: all .3s ease
+				&:hover
+					text-decoration: none
+					color: $accent
+		&.contacts_ul_phone
+			&:before
+				content: ''
+				display: block
+				width: 47px
+				height: 47px
+				background-image: url('../img/icons/whatsapp_icon-copy-2.png')
+				background-repeat: no-repeat
+				background-position: center
+				position: absolute
+				top: 0
+				left: -60px
+		&.contacts_ul_mail
+			&:before
+				content: ''
+				display: block
+				width: 47px
+				height: 47px
+				background-image: url('../img/icons/mail_icon-copy-2.png')
+				background-repeat: no-repeat
+				background-position: center
+				position: absolute
+				opacity: .5
+				top: 0
+				left: -60px
+	h3
+		text-transform: uppercase
+		font-family: $bold-font
+		font-size: 24px
+		margin-bottom: 20px
+	p
+		font-size: 19px
+
+.no-gatters
+	padding-left: 0
+	padding-right: 0
+
+.map
+	margin-top: 100px
+
+.questions
+	padding: 80px 0
+	background-image: url('../img/red_chair.jpg')
+	background-size: cover
+	background-position: center
+	min-height: 1200px
+	.sect_title
+		color: #fff
+		margin-top: 60px
+		text-align: center
+.questions_form
+	legend
+		color: #fff
+		font-size: 18px
+		margin-bottom: 40px
+		text-align: center
+	input, textarea
+		background-color: transparent
+		color: #fff
+	label
+		color: #fff
+	.form-group
+		margin-bottom: 40px
+	.form_btn
+		background-color: #fff
+		color: $accent
+		transition: all .3s ease
+		&:hover
+			background-color: #000
+			color: #fff
+
+.footer_nav
+	ul
+		list-style-type: none
+		margin: 0
+		padding: 0
+		display: flex
+		height: 203px
+		align-items: center
+		li
+			a
+				display: inline-block
+				padding: 40px 30px
+				color: #000
+				font-size: 18px
+				transition: color .3s ease
+				&:hover
+					text-decoration: none
+					color: $accent
+
+.footer
+	.slogan
+		font-size: 18px
+		margin-right: 30px
+		ul
+			list-style-type: none
+			margin: 0
+			padding: 0
+			li
+				a
+					font-family: $bold-font
+
+.consultation_form
+	legend
+		font-family: $bold-font
+		text-align: center
+		margin: 10px 0 20px 0
+	.form_btn
+		width: 100%
+
+.toggle-mnu
+	display: block
+	width: 28px
+	height: 28px
+	margin: 20px 0 20px 15px
+	position: relative
+	&:after
+		content: 'Меню'
+		position: absolute
+		right: -60px
+		top: -3px
+		color: #000
+
+	span:after, span:before 
+		content: ""
+		position: absolute
+		left: 0
+		top: 9px
+
+	span:after
+		top: 18px
+
+	span 
+		position: relative
+		display: block
+
+	span, span:after, span:before
+		width: 100%
+		height: 2px
+		background-color: #000
+		transition: all 0.3s
+		backface-visibility: hidden
+		border-radius: 2px
+
+
+	&.on span 
+		background-color: transparent
+
+	&.on span:before 
+		transform: rotate(45deg) translate(-1px, 0px)
+
+	&.on span:after 
+		transform: rotate(-45deg) translate(6px, -7px)
+
+
+
+
+
+
+@import "media" // Always at the end
